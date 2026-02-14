@@ -78,18 +78,18 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-neutral-900">
+    <section>
       {/* Header - dark background */}
-      <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
+      <div className=" mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-12">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
               Our Services
             </h2>
             <div className="mt-6">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-lg bg-[#1e3a5f] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#152d47]"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#008fe5] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-[#152d47]"
               >
                 Learn More
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function ServicesSection() {
               </Link>
             </div>
           </div>
-          <p className="max-w-xl text-base leading-relaxed text-neutral-300 lg:pt-2">
+          <p className="max-w-xl text-base leading-relaxed  lg:pt-2">
             At NTC, we offer a comprehensive suite of IT solutions designed to
             meet the evolving needs of modern businesses. Whether you&apos;re
             looking for robust IT support, innovative workplace solutions, or
@@ -108,15 +108,16 @@ export default function ServicesSection() {
       </div>
 
       {/* Cards grid - light blue background with rounded bottom */}
-      <div className="rounded-b-3xl bg-[#d4e5f4] px-4 pb-20 pt-10 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="px-8">
+      <div className="rounded-b-5xl bg-[#008fe5] rounded-2xl px-4 py-10 sm:px-6 lg:px-8 ">
+        <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2  lg:grid-cols-3">
           {services.map((service) => (
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
               className="group flex flex-col rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#a8d0ee] bg-[#e8f2fa] text-[#1e5f9e]">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#008fe5] bg-[#008fe5] text-white">
                 {service.icon}
               </div>
               <h3 className="mt-4 text-lg font-bold text-neutral-900">
@@ -133,6 +134,7 @@ export default function ServicesSection() {
               </span>
             </Link>
           ))}
+            </div>
         </div>
       </div>
     </section>

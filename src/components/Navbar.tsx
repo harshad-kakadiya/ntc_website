@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import ntcLogo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -30,17 +32,18 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200/80 bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <Link href="/" className="flex shrink-0 flex-col">
-          <span className="relative inline-block text-2xl font-bold tracking-tight text-[#2d7a3e]">
-            NTC
-            <span className="absolute left-0 top-full mt-0.5 h-0.5 w-3 bg-[#2d7a3e]" aria-hidden />
-          </span>
-          <span className="mt-1 text-xs font-medium text-neutral-500">
-            Tech Solutions
-          </span>
+    <header className="sticky top-0 z-50 w-full  border-neutral-200/80 bg-amber-50">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+        {/* Logo image - compact, top-left */}
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
+            src={ntcLogo}
+            alt="NTC - National Technology Consortium"
+            width={120}
+            height={42}
+            className="h-9 w-auto object-contain sm:h-8"
+            priority
+          />
         </Link>
 
         {/* Desktop nav links */}
@@ -55,7 +58,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900"
+                  className="flex items-center gap-1 text-base font-medium text-neutral-800 transition-colors hover:text-neutral-900"
                 >
                   {item.label}
                   <svg
@@ -74,7 +77,7 @@ export default function Navbar() {
                 </Link>
                 {servicesOpen && (
                   <div className="absolute left-0 top-full pt-2">
-                    <div className="rounded-lg border border-neutral-200 bg-white py-2 shadow-lg min-w-[240px]">
+                    <div className="min-w-[240px] rounded-lg border border-neutral-200 bg-white py-2 shadow-lg">
                       <Link
                         href="/services"
                         className="block border-b border-neutral-100 px-4 py-2.5 text-sm font-medium text-neutral-900 hover:bg-neutral-50"
@@ -99,7 +102,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900"
+                className="text-base font-medium text-neutral-800 transition-colors hover:text-neutral-900"
               >
                 {item.label}
               </Link>
@@ -111,15 +114,15 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/contact"
-            className="rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-[#1e5f9e] transition-colors hover:bg-neutral-50"
+            className="rounded-full border border-[#1e5f9e] bg-transparent px-5 py-2.5 text-base font-medium text-[#1e5f9e] transition-colors hover:bg-[#e5f0fa]"
           >
-            Get In Touch
+            Get in Touch
           </Link>
           <Link
             href="/contact#consultation"
-            className="rounded-lg bg-[#1e5f9e] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#164a7a]"
+            className="rounded-full bg-[#008fe5] px-5 py-2.5 text-base font-medium text-white transition-colors hover:bg-[#0072b5]"
           >
-            Request A Consultation
+            Request a Consultation
           </Link>
         </div>
 
@@ -188,17 +191,17 @@ export default function Navbar() {
             <div className="mt-4 flex flex-col gap-2 border-t border-neutral-200 pt-4">
               <Link
                 href="/contact"
-                className="rounded-lg border border-neutral-300 py-2.5 text-center text-sm font-medium text-[#1e5f9e]"
+                className="rounded-full border border-[#1e5f9e] py-2.5 text-center text-sm font-medium text-[#1e5f9e]"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get In Touch
+                Get in Touch
               </Link>
               <Link
                 href="/contact#consultation"
-                className="rounded-lg bg-[#1e5f9e] py-2.5 text-center text-sm font-medium text-white"
+                className="rounded-full bg-[#008fe5] py-2.5 text-center text-sm font-medium text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Request A Consultation
+                Request a Consultation
               </Link>
             </div>
           </div>

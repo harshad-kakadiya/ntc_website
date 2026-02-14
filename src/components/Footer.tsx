@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import ntcLogo from "@/assets/logo.png";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -28,18 +30,20 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-white text-neutral-700">
+    <footer className="bg-[#f5f5f5] text-neutral-700">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand & social */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold tracking-tight text-[#2d7a3e]">
-                NTC
-              </span>
-              <span className="block text-xs font-medium text-neutral-500">
-                Tech Solutions
-              </span>
+            <Link href="/" className="inline-flex flex-col items-start gap-2">
+              <Image
+                src={ntcLogo}
+                alt="NTC - National Technology Consortium"
+                width={120}
+                height={40}
+                className="h-9 w-auto object-contain"
+                priority={false}
+              />
             </Link>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -62,7 +66,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-900">
-              Quicklinks
+              Quick Links
             </h3>
             <ul className="mt-4 space-y-2">
               {quickLinks.map((link) => (
@@ -86,13 +90,13 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               <li>
                 <a
-                  href="tel:+19700000000"
+                  href="tel:+442920490000"
                   className="inline-flex items-center gap-2 text-neutral-600 transition-colors hover:text-neutral-900"
                 >
                   <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  +1 970 000 00
+                  +44 29 2049 0000
                 </a>
               </li>
               <li>
@@ -112,7 +116,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span>31 Michigan Avenue, New York</span>
+                  <span>15 Neptune Court, Vanguard Way, Cardiff, CF24 5PJ</span>
                 </span>
               </li>
             </ul>
@@ -124,14 +128,14 @@ export default function Footer() {
               Newsletter
             </h3>
             <p className="mt-4 text-sm text-neutral-600">
-              Stay up to date with our latest insights
+              Stay updated with our latest insights
             </p>
             <form onSubmit={handleNewsletterSubmit} className="mt-4 flex gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter Your Email here"
+                placeholder="Enter Your Email Here"
                 className="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-[#2d7a3e] focus:outline-none focus:ring-1 focus:ring-[#2d7a3e]"
                 aria-label="Email for newsletter"
               />
@@ -139,7 +143,7 @@ export default function Footer() {
                 type="submit"
                 className="rounded-lg bg-[#2d7a3e] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#246b32]"
               >
-                SEND
+                Send
               </button>
             </form>
           </div>
@@ -148,7 +152,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 sm:flex-row">
           <p className="text-sm text-neutral-500">
-            NTC © {new Date().getFullYear()} all right reserved.
+            ntc © 2025, all rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm">
             <Link
@@ -157,7 +161,7 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <span className="text-neutral-400">·</span>
+            <span className="text-neutral-400">|</span>
             <Link
               href="/terms"
               className="text-neutral-500 transition-colors hover:text-neutral-900"

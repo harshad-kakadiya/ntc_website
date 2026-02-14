@@ -85,7 +85,7 @@ export default function WhyChooseSection() {
                   <hr className="border-t border-[#7cb87c]/50 my-6" />
                 )}
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#1e5f9e] bg-[#1e5f9e] text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#008fe5] bg-[#008fe5] text-white">
                     {benefit.icon}
                   </div>
                   <div>

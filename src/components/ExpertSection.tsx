@@ -8,7 +8,7 @@ export default function ExpertSection() {
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
         {/* Left column - image */}
         <div className="relative order-first">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300 shadow-md sm:aspect-[5/4] lg:aspect-[4/3]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-transparent shadow-md sm:aspect-[5/4] lg:aspect-[4/3]">
             <Image
               src={HometwoImage}
               alt="Two colleagues collaborating at a laptop in an office environment"

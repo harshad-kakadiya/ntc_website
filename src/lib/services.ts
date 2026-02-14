@@ -1,6 +1,8 @@
 import type { StaticImageData } from "next/image";
-import itServiceDeskHero from "@/assets/Your-Dedicated-IT/30776db976d1d70c7c2607876951c82bef2623b3.jpg";
+import itServiceDeskHero from "@/assets/Your-Dedicated-IT/it-service-desk-hero.jpg";
 import modernWorkplaceHero from "@/assets/ServicasePage/servicesheroimageone.png";
+import vendorManagementHero from "@/assets/vendor-management/b09a44886fa491642930f606962bef865e1967f3.png";
+import cyberSecurityHero from "@/assets/Corporat-Cyber/9fd82f4e9d8e0a163f260f12a86c556f89d3913d.jpg";
 
 export type ServiceHeroContent = {
   title: string;
@@ -51,17 +53,17 @@ const serviceHeroContent: Record<string, ServiceHeroContent> = {
       "Leverage Upguard's powerful vendor management tools for enhanced control and compliance.",
     description:
       "Managing vendors across complex, multi-tier ecosystems is challenging. NTC Vendor Management services provide an elegant, precise, and comprehensive approach to control your vendor ecosystem, ensuring compliance and minimizing risk.",
-    imageSrc: modernWorkplaceHero,
+    imageSrc: vendorManagementHero,
     imageAlt:
-      "Modern open-plan office with desks, monitors, and office chairs",
+      "Modern office with long rows of desks, green chairs, and equipment boxes ready for deployment",
   },
   "cyber-security-training": {
     title: "Building a Culture of Cyber Security",
     tagline: "Comprehensive training programs designed to safeguard your business.",
     description:
       "Our cybersecurity awareness training equips your team with the knowledge and skills to identify threats, follow best practices, and protect your organisation. We deliver engaging, up-to-date content that fits your industry and culture.",
-    imageSrc: modernWorkplaceHero,
-    imageAlt: "Modern office space with desks, computer monitors displaying data visualisations",
+    imageSrc: cyberSecurityHero,
+    imageAlt: "Cyber security training room with rows of monitors and workstations",
   },
 };
 

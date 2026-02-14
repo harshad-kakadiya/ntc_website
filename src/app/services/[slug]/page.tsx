@@ -46,7 +46,7 @@ export default async function ServicePage({ params }: Props) {
   if (!content) notFound();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-section-bg">
       <main>
         <ServiceHero
           title={content.title}
@@ -56,8 +56,19 @@ export default async function ServicePage({ params }: Props) {
           imageAlt={content.imageAlt}
         />
         <KeyFeaturesSection slug={slug} />
-        <OurApproachSection />
-        <HowItWorksSection slug={slug} />
+        {slug !== "it-service-desk" && (
+          <OurApproachSection
+            {...(slug === "euc-engineer"
+              ? {
+                  title: "Process Overview",
+                  description:
+                    "From assessment to implementation, our EUC experts work with you to design and deploy solutions that meet your unique needs.",
+                  imageSrc: "/assets/EUC-Engineer/9e1ef3bb94da534601020206f7f228d33b28a9fb.png",
+                }
+              : {})}
+          />
+        )}
+        {slug === "it-service-desk" && <HowItWorksSection />}
         <TestimonialsSection />
         <CtaBanner />
       </main>

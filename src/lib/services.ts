@@ -9,7 +9,7 @@ export type ServiceSlug =
     | "it-service-desk"
     | "modern-workplace"
     | "euc-engineer"
-    | "api-development"
+    | "api-development"  
     | "vendor-management"
     | "cyber-security-training";
 

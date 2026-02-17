@@ -4,7 +4,7 @@ export default function CtaBanner() {
   return (
     <section className="px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-[#1e5f9e] px-6 py-12 sm:flex-row sm:px-10 sm:py-14">
+        <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-[#009DDA] px-6 py-12 sm:flex-row sm:px-10 sm:py-14">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
               Ready to Transform Your IT Operations?
@@ -15,7 +15,7 @@ export default function CtaBanner() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-base font-semibold text-[#1e5f9e] transition-colors hover:bg-neutral-100"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-base font-semibold text-[#171717] transition-colors hover:bg-neutral-100"
           >
             Contact Us Today
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -39,9 +39,9 @@ export default function Footer() {
               <Image
                 src={ntcLogo}
                 alt="NTC - National Technology Consortium"
-                width={120}
-                height={40}
-                className="h-9 w-auto object-contain"
+                width={91}
+                height={72}
+                className="h-[72px] w-[91px] object-contain"
                 priority={false}
               />
             </Link>

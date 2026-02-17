@@ -10,13 +10,13 @@ export default function Hero() {
                 {/* Left column - copy */}
                 <div className="flex flex-col justify-center">
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 leading-tight">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-neutral-900 leading-tight">
                         Transforming IT <br />
                         Service Management <br />
                         for the Digital Age
                     </h1>
 
-                    <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
+                    <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#878C91]">
                         Empowering your business with cutting-edge IT solutions — from
                         Service Desk excellence to Corporate Cyber Security Training.
                     </p>
@@ -44,7 +44,7 @@ export default function Hero() {
 
                         <Link
                             href="/contact#expert"
-                            className="text-base font-medium text-neutral-700 underline decoration-neutral-400 underline-offset-4 transition-colors hover:text-neutral-900 hover:decoration-neutral-600"
+                            className="text-base font-medium text-[#878C91] underline decoration-neutral-400 underline-offset-4 transition-colors hover:text-neutral-900 hover:decoration-neutral-600"
                         >
                             Speak to an Expert
                         </Link>

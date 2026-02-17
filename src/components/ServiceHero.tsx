@@ -36,7 +36,7 @@ export default function ServiceHero({
   imageAlt,
 }: ServiceHeroProps) {
   return (
-    <section className="bg-section-bg px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="bg-amber-50 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
         {/* Left column - copy */}
         <div className="flex flex-col justify-center">

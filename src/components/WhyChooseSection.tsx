@@ -70,7 +70,7 @@ export default function WhyChooseSection() {
 
         {/* Right: intro + benefits list */}
         <div className="flex flex-col lg:pt-2">
-          <p className="text-base leading-relaxed text-neutral-700 sm:text-lg">
+          <p className="text-shadow-sm leading-relaxed text-neutral-700 sm:text-lg">
             We believe in a proactive, customer-centric approach to IT service
             management. Our team of experts works closely with you to understand
             your business challenges and deliver tailored solutions that drive

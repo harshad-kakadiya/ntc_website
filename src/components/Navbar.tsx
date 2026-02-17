@@ -39,9 +39,9 @@ export default function Navbar() {
           <Image
             src={ntcLogo}
             alt="NTC - National Technology Consortium"
-            width={120}
-            height={42}
-            className="h-9 w-auto object-contain sm:h-8"
+            width={91}
+            height={72}
+            className="h-[72px] w-[91px] object-contain"
             priority
           />
         </Link>

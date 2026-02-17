@@ -109,7 +109,7 @@ export default function ServicesSection() {
 
       {/* Cards grid - light blue background with rounded bottom */}
         <div className="px-8">
-      <div className="rounded-b-5xl bg-[#008fe5] rounded-2xl px-4 py-10 sm:px-6 lg:px-8 ">
+      <div className="rounded-b-5xl bg-[#008fe5] rounded-2xl px-4 py-20 sm:px-6 lg:px-8 ">
         <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2  lg:grid-cols-3">
           {services.map((service) => (
             <Link

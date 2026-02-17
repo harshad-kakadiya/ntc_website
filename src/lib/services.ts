@@ -2,7 +2,7 @@ import type { StaticImageData } from "next/image";
 
 import itServiceDeskHero from "../assets/Your-Dedicated-IT/it-service-desk-hero.jpg";
 import modernWorkplaceHero from "../assets/ServicasePage/servicesheroimageone.png";
-import vendorManagementHero from "../assets/vendor-management/b09a44886fa491642930f606962bef865e1967f3.png";
+import vendorManagementHero from "../assets/Vendor-Management/b09a44886fa491642930f606962bef865e1967f3.png";
 import cyberSecurityHero from "../assets/Corporat-Cyber/9fd82f4e9d8e0a163f260f12a86c556f89d3913d.jpg";
 
 export type ServiceSlug =

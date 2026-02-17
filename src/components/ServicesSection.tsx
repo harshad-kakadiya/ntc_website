@@ -1,13 +1,37 @@
 import Link from "next/link";
 
-const defaultTheme = {
+type Theme = {
+  sectionBg: string;
+  primaryBlue: string;
+  secondaryBlue: string;
+  textMuted: string;
+};
+
+type ServiceItem = {
+  slug: string;
+  title: string;
+  description: string;
+  icon: string;
+};
+
+type ServicesSectionProps = {
+  theme?: Theme;
+  title?: string;
+  description?: string;
+  services?: ServiceItem[];
+  headerCtaHref?: string;
+  headerCtaText?: string;
+};
+
+const defaultTheme: Theme = {
   sectionBg: "#f4f4f4",
   primaryBlue: "#1C4670",
   secondaryBlue: "#008fe5",
   textMuted: "#6b7280",
 };
 
-function renderIcon(type) {
+
+function renderIcon(type: string) {
   const baseClass = "h-6 w-6";
 
   switch (type) {
@@ -70,7 +94,7 @@ export default function ServicesSection({
   services = [],
   headerCtaHref = "/services",
   headerCtaText = "Learn More",
-}) {
+}: ServicesSectionProps) {
   return (
     <section>
       {/* Header */}
@@ -95,7 +119,10 @@ export default function ServicesSection({
             </div>
           </div>
 
-          <p className="max-w-xl text-base leading-relaxed lg:pt-2" style={{ color: theme.textMuted }}>
+          <p
+            className="max-w-xl text-base leading-relaxed lg:pt-2"
+            style={{ color: theme.textMuted }}
+          >
             {description}
           </p>
         </div>
@@ -103,14 +130,18 @@ export default function ServicesSection({
 
       {/* Cards */}
       <div className="px-8">
-        <div className="rounded-2xl px-4 py-20 sm:px-6 lg:px-8" style={{ backgroundColor: theme.secondaryBlue }}>
+        <div
+          className="rounded-2xl px-4 py-20 sm:px-6 lg:px-8"
+          style={{ backgroundColor: theme.secondaryBlue }}
+        >
           <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link
-                key={services.slug}
-                href={`/services/${service.slug}`}
-                className="group flex flex-col rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
+  key={service.slug}
+  href={`/services/${service.slug}`}
+  className="group flex flex-col rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+>
+
                 <div
                   className="flex h-14 w-14 items-center justify-center rounded-full border-2 text-white"
                   style={{

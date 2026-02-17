@@ -1,173 +1,90 @@
 import Link from "next/link";
 
 type Theme = {
-  sectionBg: string;
-  primaryBlue: string;
-  secondaryBlue: string;
-  textMuted: string;
+    sectionBg?: string;
+    primaryBlue?: string;
+    textMuted?: string;
 };
 
 type ServiceItem = {
-  slug: string;
-  title: string;
-  description: string;
-  icon: string;
+    title?: string;
+    description?: string;
+    href?: string;
+    slug?: string;
 };
 
 type ServicesSectionProps = {
-  theme?: Theme;
-  title?: string;
-  description?: string;
-  services?: ServiceItem[];
-  headerCtaHref?: string;
-  headerCtaText?: string;
+    theme?: Theme;
+    title?: string;
+    description: string;
+    ctaHref?: string;
+    ctaText?: string;
+    services?: ServiceItem[];
 };
 
 const defaultTheme: Theme = {
-  sectionBg: "#f4f4f4",
-  primaryBlue: "#1C4670",
-  secondaryBlue: "#008fe5",
-  textMuted: "#6b7280",
+    sectionBg: "#f4f4f4",
+    primaryBlue: "#1C4670",
+    textMuted: "#6b7280",
 };
 
-
-function renderIcon(type: string) {
-  const baseClass = "h-6 w-6";
-
-  switch (type) {
-    case "desk":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="2" y="3" width="20" height="14" rx="2" />
-          <path d="M8 21h8M12 17v4" />
-        </svg>
-      );
-
-    case "workplace":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="9" cy="7" r="4" />
-          <circle cx="15" cy="7" r="4" />
-        </svg>
-      );
-
-    case "engineer":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="8" r="4" />
-          <path d="M4 20v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" />
-        </svg>
-      );
-
-    case "api":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-        </svg>
-      );
-
-    case "vendor":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="3" />
-          <circle cx="6" cy="8" r="2" />
-          <circle cx="18" cy="8" r="2" />
-        </svg>
-      );
-
-    case "security":
-      return (
-        <svg className={baseClass} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-      );
-
-    default:
-      return null;
-  }
-}
-
 export default function ServicesSection({
-  theme = defaultTheme,
-  title = "Our Services",
-  description = "",
-  services = [],
-  headerCtaHref = "/services",
-  headerCtaText = "Learn More",
-}: ServicesSectionProps) {
-  return (
-    <section>
-      {/* Header */}
-      <div className="mx-auto max-w-7xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-12">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {title}
-            </h2>
-
-            <div className="mt-6">
-              <Link
-                href={headerCtaHref}
-                className="inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium text-white transition hover:opacity-95"
-                style={{ backgroundColor: theme.secondaryBlue }}
-              >
-                {headerCtaText}
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          <p
-            className="max-w-xl text-base leading-relaxed lg:pt-2"
-            style={{ color: theme.textMuted }}
-          >
-            {description}
-          </p>
-        </div>
-      </div>
-
-      {/* Cards */}
-      <div className="px-8">
-        <div
-          className="rounded-2xl px-4 py-20 sm:px-6 lg:px-8"
-          style={{ backgroundColor: theme.secondaryBlue }}
+                                            theme = defaultTheme,
+                                            title = "Our Services",
+                                            description,
+                                            ctaHref = "/services",
+                                            ctaText = "Learn More",
+                                        }: ServicesSectionProps) {
+    return (
+        <section
+            className="w-full py-14 sm:py-16 lg:py-20"
+            style={{ backgroundColor: theme.sectionBg }}
         >
-          <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <Link
-  key={service.slug}
-  href={`/services/${service.slug}`}
-  className="group flex flex-col rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
->
+            <div className="mx-auto w-full max-w-[1300px] px-6 lg:px-12">
 
-                <div
-                  className="flex h-14 w-14 items-center justify-center rounded-full border-2 text-white"
-                  style={{
-                    borderColor: theme.secondaryBlue,
-                    backgroundColor: theme.secondaryBlue,
-                  }}
+                {/* HEADER WITH PROPER GAP */}
+                <div className="grid items-start gap-16 lg:grid-cols-[480px_1fr] lg:gap-32">
+
+                    {/* LEFT SIDE */}
+                    <div>
+                        <h2 className="text-[42px] font-semibold leading-[1.05] tracking-tight text-black sm:text-[48px] lg:text-[56px]">
+                            {title}
+                        </h2>
+
+                        <Link
+                            href={ctaHref}
+                            className="mt-6 inline-flex w-[240px] items-center justify-between rounded-full px-6 py-3 text-[14px] font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
+                            style={{ backgroundColor: theme.primaryBlue }}
+                        >
+                            <span>{ctaText}</span>
+
+                            <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20">
+                <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
                 >
-                  {renderIcon(service.icon)}
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 6l6 6-6 6" />
+                </svg>
+              </span>
+                        </Link>
+                    </div>
+
+                    {/* RIGHT SIDE */}
+                    <div className="max-w-[640px]">
+                        <p
+                            className="text-[15px] leading-8 lg:text-[16px]"
+                            style={{ color: theme.textMuted }}
+                        >
+                            {description}
+                        </p>
+                    </div>
                 </div>
 
-                <h3 className="mt-4 text-lg font-bold text-neutral-900">
-                  {service.title}
-                </h3>
-
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-neutral-600">
-                  {service.description}
-                </p>
-
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-neutral-900 group-hover:underline">
-                  Learn More
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+            </div>
+        </section>
+    );
 }

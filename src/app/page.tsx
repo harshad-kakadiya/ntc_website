@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
  
 import { servicesTheme } from "@/config/serviceTheme";
 import { services } from "@/app/data/services";
+import ServicesGrid from "@/components/ServicesGrid";
 
 export default function Home() {
     const description =
@@ -18,7 +19,6 @@ export default function Home() {
             <main>
                 <Hero />
                 <ExpertSection />
-
                 <ServicesSection
                     theme={servicesTheme}
                     title="Our Services"
@@ -27,7 +27,7 @@ export default function Home() {
                     ctaHref="/services"
                     services={services}
                 />
-
+                <ServicesGrid bgColor={"#009DDA"} paddingX={'6'} isButton={false}/>
                 <WhyChooseSection />
                 <TestimonialsSection />
                 <CtaBanner />

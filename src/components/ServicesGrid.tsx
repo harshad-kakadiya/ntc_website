@@ -48,11 +48,25 @@ const services = [
     icon: <Image src={service6} alt="Cyber Security Training" />,
   },
 ];
+type ServicesGridProps = {
+    bgColor?: string;
+    paddingX?: string; // pass tailwind class like "px-6" or "px-4 sm:px-6 lg:px-8"
+    isButton?: boolean;
+};
 
-export default function ServicesGrid() {
+export default function ServicesGrid({
+                                         bgColor = "",
+                                         paddingX = "",
+                                         isButton = true,
+                                     }: ServicesGridProps) {
   return (
-    <section className="bg-section-bg px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+      <div className={paddingX ? `px-${paddingX}` : ""}>
+          <section
+              className={`px-4 rounded-4xl py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24`}
+              style={bgColor ? { backgroundColor: bgColor } : undefined}
+          >
+
+          <div className="mx-auto max-w-7xl">
         <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Link
@@ -92,28 +106,29 @@ export default function ServicesGrid() {
         </div>
 
         {/* Central CTA */}
-        <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
-          <Link
-            href="/contact#expert"
-            className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-[#1C4670] px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-[#163a5f] hover:scale-105 active:scale-95"
-          >
-            Learn More
-            <svg
-              className="h-4 w-4 sm:h-5 sm:w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
-        </div>
+          {isButton && <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
+              <Link
+                  href="/contact#expert"
+                  className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-[#1C4670] px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-[#163a5f] hover:scale-105 active:scale-95"
+              >
+                  Learn More
+                  <svg
+                      className="h-4 w-4 sm:h-5 sm:w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                  >
+                      <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                  </svg>
+              </Link>
+          </div>}
       </div>
     </section>
+      </div>
   );
 }

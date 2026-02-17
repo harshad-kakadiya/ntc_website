@@ -31,31 +31,41 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#f5f5f5] text-neutral-700">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        
+        {/* Main Footer Grid - Responsive columns */}
+        <div className="grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          
           {/* Brand & social */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:space-y-5">
             <Link href="/" className="inline-flex flex-col items-start gap-2">
               <Image
                 src={ntcLogo}
                 alt="NTC - National Technology Consortium"
                 width={91}
                 height={72}
-                className="h-[72px] w-[91px] object-contain"
+                className="h-[60px] w-[76px] sm:h-[66px] sm:w-[84px] md:h-[72px] md:w-[91px] object-contain transition-all duration-300"
                 priority={false}
               />
             </Link>
-            <div className="flex gap-3">
+            
+            {/* Social Icons - Responsive sizing */}
+            <div className="flex gap-3 sm:gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-600 transition-colors hover:text-neutral-900"
+                  className="text-neutral-600 transition-all duration-300 hover:text-neutral-900 hover:scale-110"
                   aria-label={social.label}
                 >
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <svg 
+                    className="h-4 w-4 sm:h-5 sm:w-5 md:h-5 md:w-5" 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor" 
+                    aria-hidden
+                  >
                     <path d={social.icon} />
                   </svg>
                 </a>
@@ -65,15 +75,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-900">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-900">
               Quick Links
             </h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-3 sm:mt-4 space-y-1.5 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="text-xs sm:text-sm text-neutral-600 transition-colors hover:text-neutral-900"
                   >
                     {link.label}
                   </Link>
@@ -84,16 +94,16 @@ export default function Footer() {
 
           {/* Help / Contact */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-900">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-900">
               Help
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3">
               <li>
                 <a
                   href="tel:+442920490000"
-                  className="inline-flex items-center gap-2 text-neutral-600 transition-colors hover:text-neutral-900"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm text-neutral-600 transition-colors hover:text-neutral-900"
                 >
-                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   +44 29 2049 0000
@@ -102,21 +112,21 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@ntctech.com"
-                  className="inline-flex items-center gap-2 text-neutral-600 transition-colors hover:text-neutral-900"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm text-neutral-600 transition-colors hover:text-neutral-900"
                 >
-                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   info@ntctech.com
                 </a>
               </li>
               <li>
-                <span className="inline-flex items-start gap-2 text-neutral-600">
-                  <svg className="mt-0.5 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="inline-flex items-start gap-2 text-xs sm:text-sm text-neutral-600">
+                  <svg className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span>15 Neptune Court, Vanguard Way, Cardiff, CF24 5PJ</span>
+                  <span className="max-w-[200px] sm:max-w-none">15 Neptune Court, Vanguard Way, Cardiff, CF24 5PJ</span>
                 </span>
               </li>
             </ul>
@@ -124,24 +134,26 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-900">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-neutral-900">
               Newsletter
             </h3>
-            <p className="mt-4 text-sm text-neutral-600">
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-neutral-600">
               Stay updated with our latest insights
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="mt-4 flex gap-2">
+            
+            {/* Newsletter Form - Responsive */}
+            <form onSubmit={handleNewsletterSubmit} className="mt-3 sm:mt-4 flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Your Email Here"
-                className="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-[#2d7a3e] focus:outline-none focus:ring-1 focus:ring-[#2d7a3e]"
+                className="w-full sm:flex-1 rounded-lg border border-neutral-300 bg-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:border-[#2d7a3e] focus:outline-none focus:ring-1 focus:ring-[#2d7a3e] transition-all duration-300"
                 aria-label="Email for newsletter"
               />
               <button
                 type="submit"
-                className="rounded-lg bg-[#2d7a3e] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#246b32]"
+                className="w-full sm:w-auto rounded-lg bg-[#2d7a3e] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-white transition-all duration-300 hover:bg-[#246b32] hover:scale-[1.02] active:scale-[0.98]"
               >
                 Send
               </button>
@@ -149,19 +161,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 sm:flex-row">
-          <p className="text-sm text-neutral-500">
+        {/* Bottom bar - Responsive */}
+        <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-200 pt-6 sm:pt-8">
+          <p className="text-xs sm:text-sm text-neutral-500 text-center sm:text-left">
             ntc © 2025, all rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-sm">
+          
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
             <Link
               href="/privacy"
               className="text-neutral-500 transition-colors hover:text-neutral-900"
             >
               Privacy Policy
             </Link>
-            <span className="text-neutral-400">|</span>
+            <span className="text-neutral-400 hidden sm:inline">|</span>
+            <span className="text-neutral-400 sm:hidden mx-1">•</span>
             <Link
               href="/terms"
               className="text-neutral-500 transition-colors hover:text-neutral-900"

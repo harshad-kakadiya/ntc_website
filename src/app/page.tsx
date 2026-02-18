@@ -27,7 +27,7 @@ export default function Home() {
                     ctaHref="/services"
                     services={services}
                 />
-                <ServicesGrid bgColor={"#009DDA"} paddingX={'px-6'} isButton={false}/>
+                <ServicesGrid bgColor={"#009DDA"} paddingX={'px-8'} isButton={false}/>
                 <div className="mt-24">
                     <WhyChooseSection />
                 </div>

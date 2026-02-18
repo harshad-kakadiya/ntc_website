@@ -38,11 +38,11 @@ export default function TestimonialsSection() {
 
                     <Link
                         href="/case-studies"
-                        className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#1C4670] px-6 md:px-7 py-2.5 md:py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:bg-[#163658] active:scale-95 mx-auto sm:mx-0 w-fit"
+                        className="inline-flex shrink-0 items-center justify-center gap-5 rounded-full bg-[#1C4670] px-6 md:px-7 py-2.5 md:py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:bg-[#163658] active:scale-95 mx-auto sm:mx-0 w-fit"
                     >
                         View Case Studies
                         <svg
-                            className="h-4 w-4"
+                            className="h-5 w-5"
                             fill="none"
                             stroke="currentColor"
                             strokeWidth="2"

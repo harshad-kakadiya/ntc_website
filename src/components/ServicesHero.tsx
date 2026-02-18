@@ -43,9 +43,9 @@ export default function ServicesHero({
                 style={{ backgroundColor: theme.primaryBlue }}
               >
                 {ctaText}
-                <span className="grid h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 place-items-center rounded-full bg-white/20">
+                <span className="grid h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 place-items-center rounded-full">
                   <svg
-                    className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5"
+                    className="h-4 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import ntcLogo from "@/assets/logo.png";
+import ntcLogo from "@/assets/logo/logo.png";
 
 const quickLinks = [
     { href: "/", label: "Home" },

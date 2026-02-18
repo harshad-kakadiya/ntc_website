@@ -32,7 +32,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full  border-neutral-200/80 bg-amber-50">
+    <header className="sticky top-0 z-50 w-full  border-neutral-200/80 bg-[#EDEBE6]">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         {/* Logo image - compact, top-left */}
         <Link href="/" className="flex shrink-0 items-center">

@@ -1,3 +1,4 @@
+// ✅ FILE 1: lib/serviceHeroContent.ts  (your data + bgClass)
 import type { StaticImageData } from "next/image";
 
 import itServiceDeskHero from "../assets/Your-Dedicated-IT/it-service-desk-hero.jpg";
@@ -9,7 +10,7 @@ export type ServiceSlug =
     | "it-service-desk"
     | "modern-workplace"
     | "euc-engineer"
-    | "api-development"  
+    | "api-development"
     | "vendor-management"
     | "cyber-security-training";
 
@@ -19,6 +20,7 @@ export type ServiceHeroContent = {
     description: string;
     imageSrc: StaticImageData;
     imageAlt: string;
+    bgClass: string;
 };
 
 export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
@@ -29,6 +31,7 @@ export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
             "At NTC, our IT Service Desk is designed to ensure minimal downtime and maximum productivity. Our team is on call 24/7, offering support that's proactive, personalized, and reliable.",
         imageSrc: itServiceDeskHero,
         imageAlt: "Modern computer lab or office with desks, monitors, and natural light",
+        bgClass: "bg-[#EDEBE6]",
     },
 
     "modern-workplace": {
@@ -39,9 +42,9 @@ export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
         imageSrc: modernWorkplaceHero,
         imageAlt:
             "Modern office space with desks, green chairs, computer monitors, and blue carpet",
+        bgClass: "bg-[#EDEBE6]",
     },
 
-    // ✅ FIX: EUC same existing image use karu chu (no missing import)
     "euc-engineer": {
         title: "EUC Engineer",
         tagline: "Empowering end-user computing with precision engineering.",
@@ -49,6 +52,7 @@ export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
             "Our EUC specialists deliver robust end-user computing solutions so your people can work securely and efficiently on any device.",
         imageSrc: modernWorkplaceHero,
         imageAlt: "End-user computing and workplace technology",
+        bgClass: "bg-[#EDEBE6]",
     },
 
     "api-development": {
@@ -59,16 +63,19 @@ export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
         imageSrc: modernWorkplaceHero,
         imageAlt:
             "Modern open-plan office with desks, multiple monitors, and green ergonomic chairs",
+        bgClass: "bg-[#EDEBE6]",
     },
 
     "vendor-management": {
         title: "Simplify & Secure Your Vendor Ecosystem",
-        tagline: "Leverage Upguard's powerful vendor management tools for enhanced control and compliance.",
+        tagline:
+            "Leverage Upguard's powerful vendor management tools for enhanced control and compliance.",
         description:
             "Managing vendors across complex, multi-tier ecosystems is challenging. NTC Vendor Management services provide an elegant, precise, and comprehensive approach to control your vendor ecosystem, ensuring compliance and minimizing risk.",
         imageSrc: vendorManagementHero,
         imageAlt:
             "Modern office with long rows of desks, green chairs, and equipment boxes ready for deployment",
+        bgClass: "bg-[#EDEBE6]",
     },
 
     "cyber-security-training": {
@@ -78,6 +85,7 @@ export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
             "Our cybersecurity awareness training equips your team with the knowledge and skills to identify threats, follow best practices, and protect your organisation. We deliver engaging, up-to-date content that fits your industry and culture.",
         imageSrc: cyberSecurityHero,
         imageAlt: "Cyber security training room with rows of monitors and workstations",
+        bgClass: "bg-[#EDEBE6]",
     },
 };
 

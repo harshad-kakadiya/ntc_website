@@ -6,10 +6,10 @@ export default function CtaBanner() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-4 sm:gap-5 md:gap-6 rounded-xl sm:rounded-2xl bg-[#009DDA] px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10 md:py-12 lg:py-14 text-center sm:text-left sm:flex-row">
           <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight text-white leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold lg:text-4xl tracking-tight text-white leading-tight">
               Ready to Transform Your IT Operations?
             </h2>
-            <p className="mt-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium">
+            <p className="mt-1 text-xl sm:text-2xl font-bold md:text-3xl lg:text-4xl text-white font-medium">
               Let&apos;s Talk!
             </p>
           </div>

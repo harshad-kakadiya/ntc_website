@@ -3,7 +3,7 @@ import Link from "next/link";
 import mainImage from "../assets/ServicasePage/mainImage.png";
 
 const defaultTheme = {
-  sectionBg: "#f4f4f4",
+  sectionBg: "#EDEBE6",
   primaryBlue: "#1C4670",
   secondaryBlue: "#008fe5",
   textMuted: "#6b7280",

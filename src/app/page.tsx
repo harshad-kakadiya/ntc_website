@@ -28,7 +28,9 @@ export default function Home() {
                     services={services}
                 />
                 <ServicesGrid bgColor={"#009DDA"} paddingX={'6'} isButton={false}/>
-                <WhyChooseSection />
+                <div className="mt-24">
+                    <WhyChooseSection />
+                </div>
                 <TestimonialsSection />
                 <CtaBanner />
                 <Footer />

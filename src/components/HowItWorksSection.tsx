@@ -45,66 +45,46 @@ export default function HowItWorksSection({
 }: HowItWorksSectionProps) {
   return (
     <section
-      className="w-full py-10 sm:py-12 md:py-14 lg:py-16"
-      style={{
-        background:
-          "radial-gradient(1200px 600px at 20% 20%, #22C6F0 0%, #0AA8DC 38%, #038ABF 100%)",
-      }}
+      className="w-full py-12 sm:py-14 md:py-16 lg:py-20"
+      style={{ backgroundColor: "#0099FF" }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10">
-        
-        {/* Header - Responsive text sizes */}
-        <div className="mb-6 sm:mb-8 md:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold tracking-tight text-black">
+        {/* Header */}
+        <div className="mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-black">
             {title}
           </h2>
-          <p className="mt-1 text-xs sm:text-sm md:text-base font-normal text-white/85">
+          <p className="mt-2 text-base sm:text-lg font-normal text-neutral-800">
             {subtitle}
           </p>
         </div>
 
-        {/* Content */}
+        {/* Content: image left, steps right */}
         <div className="grid items-start gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12">
-          
-          {/* LEFT IMAGE - Fully responsive */}
+          {/* Left column – image with rounded corners */}
           <div className="relative w-full max-w-[420px] mx-auto lg:mx-0">
-            <div
-              className="p-[4px] sm:p-[5px] md:p-[6px]"
-              style={{
-                backgroundColor: "rgba(170, 235, 255, 0.75)",
-                borderRadius: "16px sm:18px md:20px",
-              }}
-            >
-              <div
-                className="overflow-hidden"
-                style={{ borderRadius: "12px sm:14px md:16px" }}
-              >
-                <Image
-                  src={imageSrc}
-                  alt={imageAlt}
-                  width={420}
-                  height={315}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
+            <div className="overflow-hidden rounded-[24px] md:rounded-[28px]">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                width={420}
+                height={315}
+                className="w-full h-auto object-cover"
+                priority
+              />
             </div>
           </div>
 
-          {/* RIGHT STEPS - Responsive spacing and text */}
+          {/* Right column – steps */}
           <div className="w-full">
-            <div className="space-y-4 sm:space-y-5 md:space-y-6">
+            <div className="space-y-0">
               {steps.map((s, idx) => (
-                <div key={idx} className="group">
-                  <div className="flex items-start gap-3 sm:gap-4">
-                    
-                    {/* Icon - Responsive sizing */}
+                <div key={idx}>
+                  <div className="flex items-start gap-4">
+                    {/* Icon – light green circle, white border, white graphic */}
                     <div
-                      className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-110"
-                      style={{
-                        backgroundColor: "#12C98A",
-                        boxShadow: "0 6px 14px rgba(0,0,0,0.15)",
-                      }}
+                      className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border-2 border-white"
+                      style={{ backgroundColor: "#A2E0A2" }}
                     >
                       {typeof s.icon === "object" &&
                       s.icon !== null &&
@@ -112,42 +92,35 @@ export default function HowItWorksSection({
                         <Image
                           src={s.icon as StaticImageData}
                           alt={s.title}
-                          width={16}
-                          height={16}
-                          className="object-contain w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-[18px] md:h-[18px]"
+                          width={24}
+                          height={24}
+                          className="object-contain w-6 h-6 brightness-0 invert"
                         />
                       ) : (
-                        <span className="text-white [&_svg]:h-4 [&_svg]:w-4 sm:[&_svg]:h-[18px] sm:[&_svg]:w-[18px] md:[&_svg]:h-5 md:[&_svg]:w-5 [&_svg]:stroke-white [&_svg]:fill-none">
+                        <span className="text-white [&_svg]:h-6 [&_svg]:w-6 [&_svg]:stroke-white [&_svg]:fill-none">
                           {s.icon as React.ReactNode}
                         </span>
                       )}
                     </div>
 
-                    {/* Text - Fully responsive font sizes */}
-                    <div className="flex-1 min-w-0">
-                      <h3
-                        className="text-sm sm:text-base md:text-lg font-semibold leading-tight sm:leading-normal"
-                        style={{ color: "#0B4B74" }}
-                      >
+                    <div className="flex-1 min-w-0 pb-6">
+                      <h3 className="text-base sm:text-lg font-bold text-black">
                         {s.title}
                       </h3>
-                      <p className="mt-1 text-xs sm:text-sm md:text-base leading-relaxed text-white/80">
+                      <p className="mt-1 text-sm sm:text-base leading-relaxed text-neutral-700">
                         {s.desc}
                       </p>
                     </div>
                   </div>
 
-                  {/* Divider - Responsive spacing */}
+                  {/* Separator – light grey line between steps */}
                   {idx !== steps.length - 1 && (
-                    <div className="mt-4 sm:mt-5 md:mt-6">
-                      <div className="ml-8 sm:ml-10 md:ml-14 h-px w-[85%] sm:w-[80%] md:w-[78%] bg-white/25" />
-                    </div>
+                    <div className="h-px w-full bg-neutral-300 mb-6 ml-14" />
                   )}
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

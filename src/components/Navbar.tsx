@@ -111,7 +111,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA buttons */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Link
             href="/contact"
             className="rounded-full border border-[#1e5f9e] bg-transparent px-5 py-2.5 text-base font-medium text-[#1e5f9e] transition-colors hover:bg-[#e5f0fa]"

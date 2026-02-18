@@ -47,20 +47,20 @@ export default function ServicesSection({
 
                     {/* LEFT SIDE */}
                     <div>
-                        <h2 className="text-[42px] font-semibold leading-[1.05] tracking-tight text-black sm:text-[48px] lg:text-[56px]">
+                        <h2 className="text-[42px] font-semibold leading-[2.05] tracking-tight text-black sm:text-[48px] lg:text-[56px]">
                             {title}
                         </h2>
 
                         <Link
                             href={ctaHref}
-                            className="mt-6 inline-flex w-[240px] items-center justify-between rounded-full px-6 py-3 text-[14px] font-semibold text-white transition-all duration-200 hover:scale-[1.02]"
+                            className="mt-6 inline-flex w-[240px] items-center justify-between rounded-full px-6 py-3 text-[20px] font-semibold text-white transition-all duration-200 "
                             style={{ backgroundColor: theme.primaryBlue }}
                         >
                             <span>{ctaText}</span>
 
-                            <span className="grid h-8 w-8 place-items-center rounded-full bg-white/20">
+                            <span className="grid h-8 w-8 place-items-center rounded-full ">
                 <svg
-                    className="h-4 w-4"
+                    className="h-6 w-6"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

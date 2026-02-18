@@ -21,10 +21,10 @@ export default function Hero() {
                         Service Desk excellence to Corporate Cyber Security Training.
                     </p>
 
-                    <div className="mt-8 flex flex-wrap items-center gap-4">
+                    <div className="mt-8 flex flex-wrap items-center gap-16">
                         <Link
                             href="/services"
-                            className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
+                            className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-4 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
                         >
                             Discover Our Services
                             <svg
@@ -44,7 +44,7 @@ export default function Hero() {
 
                         <Link
                             href="/contact#expert"
-                            className="text-base font-medium text-[#878C91] underline decoration-neutral-400 underline-offset-4 transition-colors hover:text-neutral-900 hover:decoration-neutral-600"
+                            className="text-base font-medium text-neutral-900  underline decoration-neutral-400 underline-offset-4 transition-colors hover:text-neutral-900 hover:decoration-neutral-600"
                         >
                             Speak to an Expert
                         </Link>

@@ -35,7 +35,7 @@ export default function ExpertSection() {
           <div className="mt-8">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
+              className="inline-flex items-center gap-10 rounded-full bg-[#1e3a5f] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
             >
               View All Services
               <svg

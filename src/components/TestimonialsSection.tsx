@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
             <div className="relative mx-auto max-w-6xl">
                 {/* Header */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 text-center sm:text-left">
+                    <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 text-center sm:text-left">
                         What Our Clients Say
                     </h2>
 
@@ -63,8 +63,8 @@ export default function TestimonialsSection() {
                 {/* Body (relative so we can place buttons bottom-right like screenshot) */}
                 <div className="relative mt-6 pb-16 sm:pb-20 lg:pb-0">
                     {/* Quote */}
-                    <blockquote className="max-w-4xl text-left">
-                        <p className="text-xl sm:text-5xl md:text-[24px] lg:text-[26px] xl:text-[27px] font-medium leading-relaxed text-neutral-900">
+                    <blockquote className="max-w-5xl text-left">
+                        <p className="text-[20px] sm:text-5xl md:text-[30px] lg:text-[26px] xl:text-[27px] font-medium leading-relaxed text-neutral-900">
                             &ldquo;{testimonial.quote}&rdquo;
                         </p>
 

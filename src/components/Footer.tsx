@@ -107,7 +107,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-[18px] font-bold uppercase text-neutral-900">
+                        <h3 className="text-[18px] font-bold  text-neutral-900">
                             Quick Links
                         </h3>
                         <ul className="mt-4  space-y-4">
@@ -126,7 +126,7 @@ export default function Footer() {
 
                     {/* Help */}
                     <div>
-                        <h3 className="text-[18px] font-bold uppercase text-neutral-900">Help</h3>
+                        <h3 className="text-[18px] font-bold  text-neutral-900">Help</h3>
                         <ul className="mt-4 space-y-3 text-[14px] text-neutral-500">
                             <li>07900779156</li>
                             <li>15 Neptune Court, Cardiff, CF24 5PJ</li>
@@ -149,7 +149,7 @@ export default function Footer() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter Your Email Here"
-                                    className="flex-1 bg-transparent text-sm focus:outline-none"
+                                    className="flex-1 bg-transparent text-sm py-1 focus:outline-none"
                                     required
                                 />
                                 <button

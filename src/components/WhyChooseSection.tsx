@@ -86,8 +86,8 @@ export default function WhyChooseSection() {
                                             <Image
                                                 src={benefit.icon}
                                                 alt={benefit.title}
-                                                width={24}
-                                                height={24}
+                                                width={30}
+                                                height={30}
                                                 className="object-contain"
                                             />
                                         </div>

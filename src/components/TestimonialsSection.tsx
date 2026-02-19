@@ -10,7 +10,6 @@ const testimonials = [
         name: "Michael Kaizer",
         role: "CEO of Basecamp Corp",
     },
-    // add 6–9 testimonials here...
 ];
 
 export default function TestimonialsSection() {
@@ -24,13 +23,11 @@ export default function TestimonialsSection() {
 
     return (
         <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8 lg:py-24">
-            {/* subtle grain */}
             <div className="pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-multiply">
                 <div className="h-full w-full bg-[radial-gradient(rgba(0,0,0,0.14)_1px,transparent_1px)] [background-size:10px_10px]" />
             </div>
 
             <div className="relative mx-auto max-w-6xl">
-                {/* Header */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <h2 className="text-[48px] sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 text-center sm:text-left">
                         What Our Clients Say
@@ -48,21 +45,19 @@ export default function TestimonialsSection() {
                             strokeWidth="2"
                             viewBox="0 0 24 24"
                         >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                d="M13 6l6 6-6 6"
                             />
                         </svg>
                     </Link>
                 </div>
 
-                {/* Divider */}
-                <div className="mt-5 md:mt-6 h-px w-full bg-black/20" />
+                <div className="mt-6 md:mt-6 h-px w-full bg-black/20" />
 
-                {/* Body (relative so we can place buttons bottom-right like screenshot) */}
                 <div className="relative mt-6 pb-16 sm:pb-20 lg:pb-0">
-                    {/* Quote */}
                     <blockquote className="max-w-5xl text-left">
                         <p className="text-[36px] sm:text-5xl md:text-[30px] font-medium leading-relaxed text-neutral-900">
                             &ldquo;{testimonial.quote}&rdquo;
@@ -80,13 +75,9 @@ export default function TestimonialsSection() {
                         </footer>
                     </blockquote>
 
-                    {/* NAV BUTTONS
-              - Mobile: show under content (normal flow)
-              - Desktop (lg+): position bottom-right like your image
-          */}
                     <div className="mt-6 flex justify-center lg:mt-0 lg:absolute lg:right-0 lg:bottom-2">
                         <div className="flex items-center gap-4">
-                            {/* Prev - outlined pill */}
+                            {/* Prev (outlined pill like image) */}
                             <button
                                 type="button"
                                 onClick={prev}
@@ -94,21 +85,22 @@ export default function TestimonialsSection() {
                                 aria-label="Previous testimonial"
                             >
                                 <svg
-                                    className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-0.5"
+                                    className="h-5 w-5"
                                     fill="none"
                                     stroke="currentColor"
                                     strokeWidth="2"
                                     viewBox="0 0 24 24"
                                 >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H7" />
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        d="M15 19l-7-7 7-7"
+                                        d="M11 6l-6 6 6 6"
                                     />
                                 </svg>
                             </button>
 
-                            {/* Next - filled pill */}
+                            {/* Next (filled pill like image) */}
                             <button
                                 type="button"
                                 onClick={next}
@@ -116,16 +108,17 @@ export default function TestimonialsSection() {
                                 aria-label="Next testimonial"
                             >
                                 <svg
-                                    className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5"
+                                    className="h-5 w-5"
                                     fill="none"
                                     stroke="currentColor"
                                     strokeWidth="2"
                                     viewBox="0 0 24 24"
                                 >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        d="M9 5l7 7-7 7"
+                                        d="M13 6l6 6-6 6"
                                     />
                                 </svg>
                             </button>

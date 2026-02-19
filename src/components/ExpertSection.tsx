@@ -24,12 +24,10 @@ export default function ExpertSection() {
                 {/* Right column - copy */}
                 <div className="flex flex-col justify-center">
 
-                    {/* ✅ 48px Heading */}
-                    <h2 className="text-[48px] font-bold tracking-tight text-neutral-900 leading-tight">
+                    <h2 className="text-[48px] font-medium tracking-tight text-neutral-900 leading-tight">
                         Speak to an Expert
                     </h2>
 
-                    {/* ✅ 16px Paragraph */}
                     <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-neutral-600">
                         National Technology Consortium is a trusted IT Service Management
                         partner dedicated to helping businesses harness the power of modern
@@ -41,21 +39,18 @@ export default function ExpertSection() {
                     <div className="mt-8">
                         <Link
                             href="/services"
-                            className="inline-flex items-center gap-3 rounded-full bg-[#1e3a5f] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
+                            className="inline-flex items-center gap-5 rounded-full bg-[#1e3a5f] px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
                         >
                             View All Services
                             <svg
                                 className="h-5 w-5"
                                 fill="none"
                                 stroke="currentColor"
+                                strokeWidth="2"
                                 viewBox="0 0 24 24"
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 6l6 6-6 6" />
                             </svg>
                         </Link>
                     </div>

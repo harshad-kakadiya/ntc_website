@@ -81,38 +81,33 @@ export default function ServicesGrid({
                                     </div>
                                 </div>
 
-                                {/* ✅ Title 24px */}
                                 <h3 className="mt-3 sm:mt-4 text-[24px] font-semibold text-neutral-900 leading-tight">
                                     {service.title}
                                 </h3>
 
-                                {/* ✅ Description 16px */}
                                 <p className="mt-1.5 sm:mt-2 flex-1 text-[16px] leading-relaxed text-neutral-600">
                                     {service.description}
                                 </p>
 
-                                {/* ✅ Learn More 18px */}
+                                {/* ✅ Updated Arrow Here */}
                                 <span className="mt-3 sm:mt-4 inline-flex items-center gap-1.5 sm:gap-2 text-[18px] font-bold text-black leading-none">
                   Learn More
                   <svg
                       className="h-4 w-4 transition-transform group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
+                      strokeWidth="2"
                       viewBox="0 0 24 24"
                   >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 6l6 6-6 6" />
                   </svg>
                 </span>
                             </Link>
                         ))}
                     </div>
 
-                    {/* Central CTA (unchanged) */}
+                    {/* Central CTA */}
                     {isButton && (
                         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
                             <Link
@@ -127,11 +122,8 @@ export default function ServicesGrid({
                                     strokeWidth="2"
                                     viewBox="0 0 24 24"
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                                    />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 6l6 6-6 6" />
                                 </svg>
                             </Link>
                         </div>

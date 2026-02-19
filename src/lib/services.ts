@@ -26,7 +26,8 @@ export type ServiceHeroContent = {
 export const serviceHeroContent: Record<ServiceSlug, ServiceHeroContent> = {
     "it-service-desk": {
         title: "Your Dedicated IT Service Desk Partner",
-        tagline: "Delivering prompt, efficient, and effective support for your business.",
+        tagline:
+            "Delivering prompt, efficient, and effective support for your business.",
         description:
             "At NTC, our IT Service Desk is designed to ensure minimal downtime and maximum productivity. Our team is on call 24/7, offering support that's proactive, personalized, and reliable.",
         imageSrc: itServiceDeskHero,

@@ -47,13 +47,13 @@ export default function ServicesSection({
 
                     {/* LEFT SIDE */}
                     <div>
-                        <h2 className="text-[42px] font-semibold leading-[2.05] tracking-tight text-black sm:text-[48px] lg:text-[56px]">
+                        <h2 className="text-[42px] font-semibold leading-[2.05] tracking-tight text-black sm:text-[48px] ">
                             {title}
                         </h2>
 
                         <Link
                             href={ctaHref}
-                            className="mt-6 inline-flex w-[240px] items-center justify-between rounded-full px-6 py-3 text-[20px] font-semibold text-white transition-all duration-200 "
+                            className="mt-6 inline-flex w-[240px] items-center justify-between rounded-full px-6 py-3 text-[16px] font-semibold text-white transition-all duration-200 "
                             style={{ backgroundColor: theme.primaryBlue }}
                         >
                             <span>{ctaText}</span>

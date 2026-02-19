@@ -9,7 +9,7 @@ export default function CtaBanner() {
             <h2 className="text-[48px] font-medium  tracking-tight text-white leading-tight">
               Ready to Transform Your IT
             </h2>
-            <p className="mt-1 text-[48px   ] text-white font-medium">
+            <p className="mt-1 text-[48px] text-white font-medium">
                 Operations Let&apos;s Talk!
             </p>
           </div>

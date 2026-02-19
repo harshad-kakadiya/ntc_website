@@ -46,20 +46,17 @@ export default function ServicesHero({
                             >
                                 {ctaText}
                                 <span className="grid h-8 w-8 place-items-center rounded-full">
-                  <svg
-                      className="h-5 w-5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                  >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
+                                    <svg
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 6l6 6-6 6" />
+                                    </svg>
+                                </span>
                             </Link>
                         </div>
                     </div>
@@ -67,7 +64,7 @@ export default function ServicesHero({
                     {/* RIGHT */}
                     <div className="flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[560px] overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[22px] lg:rounded-[26px] shadow-lg">
-                            <div className="absolute inset-0 ring-1 ring-black/5 sm:ring-black/10 rounded-xl sm:rounded-2xl md:rounded-[22px] lg:rounded-[26px]" />
+                            <div className="absoluteF inset-0 ring-1 ring-black/5 sm:ring-black/10 rounded-xl sm:rounded-2xl md:rounded-[22px] lg:rounded-[26px]" />
                             <Image
                                 src={mainImage}
                                 alt="Office workspace"

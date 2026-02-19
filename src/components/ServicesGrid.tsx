@@ -112,7 +112,7 @@ export default function ServicesGrid({
                         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
                             <Link
                                 href="/contact#expert"
-                                className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-[#1C4670] px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-[#163a5f] hover:scale-105 active:scale-95"
+                                className="inline-flex items-center justify-center gap-10 rounded-full bg-[#1C4670] px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-[#163a5f] hover:scale-105 active:scale-95"
                             >
                                 Learn More
                                 <svg

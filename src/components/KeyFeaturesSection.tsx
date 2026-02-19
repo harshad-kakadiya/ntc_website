@@ -165,12 +165,12 @@ export default function KeyFeaturesSection({
                                         className="flex flex-col items-center text-center max-w-[180px]"
                                     >
                                         {/* Icon Circle */}
-                                        <div className="flex h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 shrink-0 items-center justify-center rounded-full bg-[#00a7e1] text-white shadow-xl mb-4 sm:mb-5">
+                                        <div className="flex h-20 w-20  shrink-0 items-center justify-center rounded-full bg-[#00a7e1] text-white shadow-xl mb-4 sm:mb-5">
                                             <Image
                                                 src={feature.iconSrc}
                                                 alt={feature.lines[0]}
-                                                width={44}
-                                                height={44}
+                                                width={34}
+                                                height={34}
                                                 className="object-contain"
                                             />
                                         </div>

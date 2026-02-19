@@ -23,7 +23,7 @@ export default function CtaBanner() {
                             className="h-4 w-4 sm:h-4.5 sm:w-4.5 md:h-5 md:w-5 transition-transform"
                             fill="none"
                             stroke="currentColor"
-                            strokeWidth="2"
+                            strokeWidth="2.5"
                             viewBox="0 0 24 24"
                         >
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h12" />

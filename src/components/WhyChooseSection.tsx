@@ -159,7 +159,7 @@ export default function WhyChooseSection() {
                         Why Choose NTC?
                     </h2>
 
-                    <p className="max-w-[520px] text-sm leading-relaxed text-neutral-600">
+                    <p className="max-w-[520px] text-[16px] leading-relaxed text-neutral-600">
                         We believe in a proactive, customer-centric approach to IT service
                         management. Our team of experts works closely with you to understand
                         your business challenges and deliver tailored solutions that drive
@@ -208,10 +208,10 @@ export default function WhyChooseSection() {
 
                                         {/* text */}
                                         <div className="min-w-0">
-                                            <h3 className="text-lg font-semibold text-neutral-900">
+                                            <h3 className="text-[20px] font-semibold text-neutral-900">
                                                 {benefit.title}
                                             </h3>
-                                            <p className="mt-1 text-sm leading-relaxed text-neutral-600">
+                                            <p className="mt-1 text-[16px] leading-relaxed text-neutral-600">
                                                 {benefit.description}
                                             </p>
                                         </div>

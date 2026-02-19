@@ -32,13 +32,13 @@ export default function TestimonialsSection() {
             <div className="relative mx-auto max-w-6xl">
                 {/* Header */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 text-center sm:text-left">
+                    <h2 className="text-[48px] sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 text-center sm:text-left">
                         What Our Clients Say
                     </h2>
 
                     <Link
                         href="/case-studies"
-                        className="inline-flex shrink-0 items-center justify-center gap-5 rounded-full bg-[#1C4670] px-6 md:px-7 py-2.5 md:py-3 text-xs sm:text-sm font-semibold text-white transition-all duration-300 hover:bg-[#163658] active:scale-95 mx-auto sm:mx-0 w-fit"
+                        className="inline-flex shrink-0 items-center justify-center gap-5 rounded-full bg-[#1C4670] px-6 md:px-7 py-2.5 md:py-3 text-[16px] font-semibold text-white transition-all duration-300 hover:bg-[#163658] active:scale-95 mx-auto sm:mx-0 w-fit"
                     >
                         View Case Studies
                         <svg
@@ -64,16 +64,16 @@ export default function TestimonialsSection() {
                 <div className="relative mt-6 pb-16 sm:pb-20 lg:pb-0">
                     {/* Quote */}
                     <blockquote className="max-w-5xl text-left">
-                        <p className="text-[20px] sm:text-5xl md:text-[30px] lg:text-[26px] xl:text-[27px] font-medium leading-relaxed text-neutral-900">
+                        <p className="text-[36px] sm:text-5xl md:text-[30px] font-medium leading-relaxed text-neutral-900">
                             &ldquo;{testimonial.quote}&rdquo;
                         </p>
 
                         <footer className="mt-8 md:mt-10">
                             <cite className="not-italic">
-                <span className="block text-sm sm:text-base font-semibold text-neutral-900">
+                <span className="block text-[20px] font-semibold text-neutral-900">
                   {testimonial.name}
                 </span>
-                                <span className="block text-xs sm:text-sm text-neutral-600 mt-0.5">
+                                <span className="block text-[16px] text-neutral-600 mt-0.5">
                   {testimonial.role}
                 </span>
                             </cite>

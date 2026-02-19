@@ -11,12 +11,12 @@ export default function Hero() {
                 <div className="flex flex-col justify-center">
 
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-neutral-900 leading-tight">
-                        Transforming IT <br />
-                        Service Management <br />
+                        Transforming IT <br/>
+                        Service Management <br/>
                         for the Digital Age
                     </h1>
 
-                    <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#878C91]">
+                    <p className="mt-6 max-w-xl  text-[16px] leading-relaxed text-[#878C91]">
                         Empowering your business with cutting-edge IT solutions — from
                         Service Desk excellence to Corporate Cyber Security Training.
                     </p>
@@ -24,7 +24,7 @@ export default function Hero() {
                     <div className="mt-8 flex flex-wrap items-center gap-16">
                         <Link
                             href="/services"
-                            className="inline-flex items-center gap-2 rounded-full bg-[#1e3a5f] px-6 py-4 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
+                            className="inline-flex items-center gap-10 rounded-full bg-[#1e3a5f] px-6 py-4 text-base font-medium text-white transition-colors hover:bg-[#152d47]"
                         >
                             Discover Our Services
                             <svg
@@ -53,7 +53,8 @@ export default function Hero() {
 
                 {/* Right column - image */}
                 <div className="relative order-first lg:order-last">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-200 shadow-lg sm:aspect-[5/4] lg:aspect-[4/3]">
+                    <div
+                        className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-200 shadow-lg sm:aspect-[5/4] lg:aspect-[4/3]">
                         <Image
                             src={HomeHeroImage}
                             alt="Team members collaborating on IT solutions"

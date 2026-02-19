@@ -107,15 +107,15 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-sm font-bold uppercase text-neutral-900">
+                        <h3 className="text-[18px] font-bold uppercase text-neutral-900">
                             Quick Links
                         </h3>
-                        <ul className="mt-4 space-y-2">
+                        <ul className="mt-4  space-y-4">
                             {quickLinks.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="text-neutral-500 hover:text-neutral-900 text-sm"
+                                        className="text-neutral-500 text-[14px]"
                                     >
                                         {link.label}
                                     </Link>
@@ -126,8 +126,8 @@ export default function Footer() {
 
                     {/* Help */}
                     <div>
-                        <h3 className="text-sm font-bold uppercase text-neutral-900">Help</h3>
-                        <ul className="mt-4 space-y-3 text-sm text-neutral-500">
+                        <h3 className="text-[18px] font-bold uppercase text-neutral-900">Help</h3>
+                        <ul className="mt-4 space-y-3 text-[14px] text-neutral-500">
                             <li>07900779156</li>
                             <li>15 Neptune Court, Cardiff, CF24 5PJ</li>
                         </ul>
@@ -135,10 +135,10 @@ export default function Footer() {
 
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-sm font-bold uppercase text-neutral-900">
+                        <h3 className="text-[18px] font-bold  text-neutral-900">
                             Newsletter
                         </h3>
-                        <p className="mt-3 text-sm text-neutral-600">
+                        <p className="mt-3  text-[14px] text-neutral-500">
                             Stay updated with our latest insights
                         </p>
 

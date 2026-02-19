@@ -1,174 +1,137 @@
 import Image from "next/image";
-import AboutTwoimage from "../assets/HomePage/hometwo.png";
+import AboutTwoimage from "../assets/ServicasePage/servicesImage.png";
 
-/* ✅ copy-to-copy colors */
-const ICON_BG = "#22C58B";
-const ICON_STROKE = "#FFFFFF";
+/* ✅ ICON IMAGES */
+import ExpertiseIcon from "../assets/icon/392c281f881ed78b500f4b5e1ed4db0361db758b.png";
+import InnovationIcon from "../assets/icon/e41f2be29afe29d4b0f58d636457dc66b0634905.png";
+import ReliabilityIcon from "../assets/icon/ce732699007f74b6bda084b97f8cd61eac1aa13a.png";
+import CustomerFocusIcon from "../assets/icon/cc2db771b0d2027299052dd8cebd090f54bc5d86.png";
+
+/* Colors */
+const SECTION_BG = "#009BD7";
+const IMAGE_RING_COLOR = "#BFE9FF";
+const ICON_BG = "#1DC690";
 
 const benefits = [
     {
         title: "Expertise",
         description: "A seasoned team with deep industry knowledge.",
-        icon: (
-            <svg
-                className="h-[30px] w-[30px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={ICON_STROKE}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-        ),
+        icon: ExpertiseIcon,
     },
     {
         title: "Innovation",
         description: "Leveraging the latest technology trends to drive growth.",
-        icon: (
-            <svg
-                className="h-[30px] w-[30px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={ICON_STROKE}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path d="M9 18h6" />
-                <path d="M10 22h4" />
-                <path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2a7 7 0 0 0-4-12z" />
-            </svg>
-        ),
+        icon: InnovationIcon,
     },
     {
         title: "Reliability",
         description: "Consistent, high-quality service that you can trust.",
-        icon: (
-            <svg
-                className="h-[30px] w-[30px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={ICON_STROKE}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path d="M9 12l2 2 4-4" />
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-            </svg>
-        ),
+        icon: ReliabilityIcon,
     },
     {
         title: "Customer Focus",
         description: "Solutions designed with your business in mind.",
-        icon: (
-            <svg
-                className="h-[30px] w-[30px]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={ICON_STROKE}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-        ),
+        icon: CustomerFocusIcon,
     },
 ];
 
 export default function WhyChooseSectionBlue() {
     return (
-        <section className="relative overflow-hidden">
-            {/* ✅ background */}
-            <div className="absolute inset-0 bg-[radial-gradient(1200px_700px_at_18%_10%,rgba(0,0,0,0.22),transparent_60%),linear-gradient(135deg,#028FC7_0%,#00A6D8_100%)]" />
+        <section className="relative">
+            {/* Blue area */}
+            <div className="relative" style={{ backgroundColor: SECTION_BG }}>
+                {/* subtle gradient overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10" />
 
-            {/* ✅ bottom strip + top divider line (like image) */}
-            <div className="absolute bottom-0 left-0 right-0 h-[185px] bg-[#EFEFEF]" />
-            <div className="absolute bottom-[185px] left-0 right-0 h-[6px] bg-[#DFF3FF]" />
+                {/* ✅ PX FIXED HERE */}
+                <div className="relative mx-auto max-w-7xl px-6 pt-14 pb-24 lg:px-8 lg:pt-20 lg:pb-32">
+                    <div className="grid gap-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-10">
 
-            {/* ✅ content */}
-            <div className="relative px-6 pt-[78px] pb-[205px] lg:px-[80px]">
-                <div className="mx-auto max-w-[1500px]">
-                    {/* ✅ top row */}
-                    <div className="grid gap-16 lg:grid-cols-[650px_1fr] lg:items-start">
-                        <h2 className="!text-[66px] !leading-[1.02] font-semibold tracking-tight text-black">
-                            Why Choose NTC?
-                        </h2>
+                        {/* TOP LEFT: Title */}
+                        <div className="lg:col-start-1 lg:row-start-1">
+                            <h2 className="text-[48px] font-semibold tracking-tight text-black lg:leading-[1.05]">
+                                Why Choose NTC?
+                            </h2>
+                        </div>
 
-                        <p className="max-w-[820px] text-[15px] leading-8 text-white/95">
-                            We believe in a proactive, customer-centric approach to IT service
-                            management. Our team of experts works closely with you to understand
-                            your business challenges and deliver tailored solutions that drive
-                            success. With industry-leading technologies, proven methodologies,
-                            and an unwavering commitment to excellence, NTC is your partner in
-                            digital transformation.
-                        </p>
-                    </div>
+                        {/* TOP RIGHT: Paragraph */}
+                        <div className="lg:col-start-2 lg:row-start-1 lg:pt-2">
+                            <p className="max-w-xl text-[16px] leading-relaxed text-white">
+                                We believe in a proactive, customer-centric approach to IT service
+                                management. Our team of experts works closely with you to understand
+                                your business challenges and deliver tailored solutions that drive
+                                success. With industry-leading technologies, proven methodologies,
+                                and an unwavering commitment to excellence, NTC is your partner in
+                                digital transformation.
+                            </p>
+                        </div>
 
-                    {/* ✅ bottom row */}
-                    <div className="mt-[68px] grid gap-16 lg:grid-cols-[650px_1fr] lg:items-start">
-                        {/* ✅ LEFT image (same frame look + softer border) */}
-                        <div className="relative">
-                            <div className="relative w-[640px] max-w-full">
-                                <div className="relative h-[610px] rounded-[44px] border-[14px] border-[#CDEEFF] shadow-[0_22px_60px_rgba(0,0,0,0.22)]">
-                                    <div className="absolute inset-[14px] overflow-hidden rounded-[34px] bg-white">
-                                        <Image
-                                            src={AboutTwoimage}
-                                            alt="Team collaborating"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                            sizes="640px"
-                                        />
+                        {/* BOTTOM LEFT: Image */}
+                        <div className="lg:col-start-1 lg:row-start-2">
+                            <div className="relative">
+                                <div
+                                    className="rounded-[28px] p-[8px] shadow-xl"
+                                    style={{ backgroundColor: IMAGE_RING_COLOR }}
+                                >
+                                    <div className="overflow-hidden rounded-[22px] bg-white">
+                                        <div className="relative w-full max-w-[523px] aspect-[523/581]">
+                                            <Image
+                                                src={AboutTwoimage}
+                                                alt="Team collaborating around a wooden table in an office"
+                                                fill
+                                                className="object-cover"
+                                                priority
+                                                sizes="(max-width: 1024px) 100vw, 523px"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-
-                                {/* ✅ overlap into strip */}
-                                <div className="hidden lg:block h-[140px]" />
                             </div>
                         </div>
 
-                        {/* ✅ RIGHT list (titles bigger, divider starts after icon) */}
-                        <div className="pt-2">
-                            <ul className="space-y-0 max-w-[900px]">
+                        {/* BOTTOM RIGHT: Benefit list */}
+                        <div className="lg:col-start-2 lg:row-start-2">
+                            <ul className="mt-5 space-y-6">
                                 {benefits.map((benefit, index) => (
-                                    <li key={benefit.title} className="py-7 first:pt-0">
-                                        <div className="flex gap-8">
+                                    <li key={benefit.title}>
+                                        <div className="flex items-start gap-5">
                                             <div
-                                                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full shadow-[0_12px_26px_rgba(0,0,0,0.18)]"
+                                                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full"
                                                 style={{ backgroundColor: ICON_BG }}
                                             >
-                                                {benefit.icon}
+                                                <Image
+                                                    src={benefit.icon}
+                                                    alt={benefit.title}
+                                                    width={22}
+                                                    height={22}
+                                                    className="object-contain"
+                                                />
                                             </div>
 
-                                            <div className="min-w-0 flex-1">
-                                                <h3 className="text-[26px] font-semibold leading-7 text-[#0B3E5C]">
+                                            <div className="min-w-0">
+                                                <h3 className="text-[24px] font-semibold text-[#1C4670]">
                                                     {benefit.title}
                                                 </h3>
-
-                                                <p className="mt-2 text-[15px] leading-7 text-white/95">
+                                                <p className="mt-1 text-[15px] leading-relaxed text-white">
                                                     {benefit.description}
                                                 </p>
-
-                                                {index !== benefits.length - 1 && (
-                                                    <div className="mt-8 h-px w-full bg-white/25" />
-                                                )}
                                             </div>
                                         </div>
+
+                                        {index !== benefits.length - 1 && (
+                                            <div className="ml-[68px] mt-6 h-px w-full bg-white/40" />
+                                        )}
                                     </li>
                                 ))}
                             </ul>
                         </div>
+
                     </div>
-                    {/* end bottom row */}
                 </div>
             </div>
+
+            {/* White area under blue */}
+            <div className="h-28 bg-white sm:h-32 lg:h-40" aria-hidden="true" />
         </section>
     );
 }

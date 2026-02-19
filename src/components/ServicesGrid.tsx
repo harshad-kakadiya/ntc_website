@@ -51,7 +51,7 @@ const services = [
 
 type ServicesGridProps = {
     bgColor?: string;
-    paddingX?: string; // pass tailwind class like "px-6" or "px-4 sm:px-6 lg:px-8"
+    paddingX?: string;
     isButton?: boolean;
 };
 
@@ -74,25 +74,28 @@ export default function ServicesGrid({
                                 href={`/services/${service.slug}`}
                                 className="group flex flex-col rounded-xl border border-neutral-100 bg-white p-4 sm:p-5 md:p-6 shadow-sm transition-shadow hover:shadow-md"
                             >
-                                {/* ✅ ONLY CHANGE: icon sizes bigger */}
+                                {/* Icon */}
                                 <div className="flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center text-white">
                                     <div className="relative h-14 w-14 sm:h-16 sm:w-16">
                                         {service.icon}
                                     </div>
                                 </div>
 
-                                <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold text-neutral-900 leading-tight">
+                                {/* ✅ Title 24px */}
+                                <h3 className="mt-3 sm:mt-4 text-[24px] font-semibold text-neutral-900 leading-tight">
                                     {service.title}
                                 </h3>
 
-                                <p className="mt-1.5 sm:mt-2 flex-1 text-xs sm:text-sm leading-relaxed text-neutral-600">
+                                {/* ✅ Description 16px */}
+                                <p className="mt-1.5 sm:mt-2 flex-1 text-[16px] leading-relaxed text-neutral-600">
                                     {service.description}
                                 </p>
 
-                                <span className="mt-3 sm:mt-4 inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-bold text-black leading-none">
+                                {/* ✅ Learn More 18px */}
+                                <span className="mt-3 sm:mt-4 inline-flex items-center gap-1.5 sm:gap-2 text-[18px] font-bold text-black leading-none">
                   Learn More
                   <svg
-                      className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1"
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -109,7 +112,7 @@ export default function ServicesGrid({
                         ))}
                     </div>
 
-                    {/* Central CTA */}
+                    {/* Central CTA (unchanged) */}
                     {isButton && (
                         <div className="mt-8 sm:mt-10 lg:mt-12 flex justify-center">
                             <Link

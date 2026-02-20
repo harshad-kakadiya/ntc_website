@@ -67,21 +67,21 @@ export default function WhyChooseSectionBlue() {
                         </div>
 
                         {/* BOTTOM LEFT: Image */}
-                        <div className="lg:col-start-1 lg:row-start-2">
+                        <div className="lg:col-start-1 lg:row-start-2 ">
                             <div className="relative">
                                 <div
                                     className="rounded-[28px] p-[8px] shadow-xl"
                                     style={{ backgroundColor: IMAGE_RING_COLOR }}
                                 >
                                     <div className="overflow-hidden rounded-[22px] bg-white">
-                                        <div className="relative w-full max-w-[523px] aspect-[523/581]">
+                                        <div className="relative w-[523px] max-w-[581px] aspect-[523/581]">
                                             <Image
                                                 src={AboutTwoimage}
                                                 alt="Team collaborating around a wooden table in an office"
                                                 fill
                                                 className="object-cover"
                                                 priority
-                                                sizes="(max-width: 1024px) 100vw, 523px"
+                                                sizes="(max-width: 1024px) 100vw, 50vw"
                                             />
                                         </div>
                                     </div>
@@ -102,8 +102,8 @@ export default function WhyChooseSectionBlue() {
                                                 <Image
                                                     src={benefit.icon}
                                                     alt={benefit.title}
-                                                    width={22}
-                                                    height={22}
+                                                    width={30}
+                                                    height={30}
                                                     className="object-contain"
                                                 />
                                             </div>

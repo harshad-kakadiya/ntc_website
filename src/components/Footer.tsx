@@ -15,19 +15,19 @@ const quickLinks = [
 
 const socialLinks = [
     {
-        href: "https://facebook.com",
-        label: "Facebook",
+        href: "https://share.google/LBztw0DOwPgvmVue8",
+        label: "Google",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 24 24">
                 <path
                     fill="#080808"
-                    d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396z"
+                    d="M12.183 2.75c-3.683 0-6.902 2.031-8.419 5.088a9.05 9.05 0 0 0 0 8.325c1.517 3.056 4.736 5.087 8.419 5.087c2.54 0 4.72-.827 6.244-2.224c2.484-2.173 3.185-5.599 2.658-8.688a.25.25 0 0 0-.246-.208h-8.656a.25.25 0 0 0-.25.25v3.33c0 .138.112.25.25.25h4.768c-.166.74-.687 1.747-1.685 2.423l-.008.005c-.685.502-1.735.852-3.075.852c-2.936 0-5.275-2.455-5.275-5.33c0-2.783 2.472-5.24 5.275-5.24c1.67 0 2.72.683 3.429 1.29a.25.25 0 0 0 .337-.011l2.578-2.52a.25.25 0 0 0-.011-.368c-1.609-1.388-3.784-2.311-6.333-2.311"
                 />
             </svg>
         ),
     },
     {
-        href: "https://twitter.com",
+        href: "https://x.com/ProCvCreator",
         label: "Twitter",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ const socialLinks = [
         ),
     },
     {
-        href: "https://linkedin.com",
+        href: "https://www.linkedin.com/company/procv-creator/",
         label: "LinkedIn",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 24 24">
@@ -51,13 +51,13 @@ const socialLinks = [
         ),
     },
     {
-        href: "https://instagram.com",
-        label: "Instagram",
+        href: "https://www.tiktok.com/@procvcreator",
+        label: "Tiktok",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 24 24">
                 <path
                     fill="#080808"
-                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-5 4.5A3.5 3.5 0 1 1 8.5 12A3.5 3.5 0 0 1 12 8.5m0 2A1.5 1.5 0 1 0 13.5 12A1.5 1.5 0 0 0 12 10.5M17.75 6.25a1 1 0 1 1-1 1a1 1 0 0 1 1-1"
+                    d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
                 />
             </svg>
         ),
@@ -76,6 +76,7 @@ export default function Footer() {
         <footer className="bg-[#f5f5f5] text-neutral-700">
             <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
                 <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+
                     {/* Brand */}
                     <div className="space-y-4">
                         <Link href="/" className="inline-flex flex-col gap-2">
@@ -88,7 +89,6 @@ export default function Footer() {
                             />
                         </Link>
 
-                        {/* ✅ ONLY ICONS updated (like screenshot): separate white circles, no beige box */}
                         <div className="flex items-center gap-3">
                             {socialLinks.map((social) => (
                                 <a
@@ -97,7 +97,7 @@ export default function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={social.label}
-                                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition hover:shadow-md hover:-translate-y-[1px] active:translate-y-0"
+                                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5 transition hover:shadow-md hover:-translate-y-[1px]"
                                 >
                                     {social.icon}
                                 </a>
@@ -107,10 +107,10 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-[18px] font-bold  text-neutral-900">
+                        <h3 className="text-[18px] font-bold text-neutral-900">
                             Quick Links
                         </h3>
-                        <ul className="mt-4  space-y-4">
+                        <ul className="mt-4 space-y-4">
                             {quickLinks.map((link) => (
                                 <li key={link.href}>
                                     <Link
@@ -126,7 +126,9 @@ export default function Footer() {
 
                     {/* Help */}
                     <div>
-                        <h3 className="text-[18px] font-bold  text-neutral-900">Help</h3>
+                        <h3 className="text-[18px] font-bold text-neutral-900">
+                            Help
+                        </h3>
                         <ul className="mt-4 space-y-3 text-[14px] text-neutral-500">
                             <li>07900779156</li>
                             <li>15 Neptune Court, Cardiff, CF24 5PJ</li>
@@ -135,10 +137,10 @@ export default function Footer() {
 
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-[18px] font-bold  text-neutral-900">
+                        <h3 className="text-[18px] font-bold text-neutral-900">
                             Newsletter
                         </h3>
-                        <p className="mt-3  text-[14px] text-neutral-500">
+                        <p className="mt-3 text-[14px] text-neutral-500">
                             Stay updated with our latest insights
                         </p>
 
